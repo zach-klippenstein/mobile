@@ -15,7 +15,7 @@ type Type int
 
 var sensorNames = map[Type]string{
 	Accelerometer: "Accelerometer",
-	Gyroscope:     "Gyrsocope",
+	Gyroscope:     "Gyroscope",
 	Magnetometer:  "Magnetometer",
 }
 
@@ -73,7 +73,7 @@ type Manager struct {
 // the default one.
 // If there is no default sensor of type t on the device, an error returned.
 // Valid sensor types supported by this package are Accelerometer,
-// Gyroscope, Magnetometer and Altimeter.
+// Gyroscope, and Magnetometer.
 func (m *Manager) Enable(t Type, delay time.Duration) error {
 	if m.m == nil {
 		m.m = new(manager)
